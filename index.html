@@ -11,7 +11,7 @@
 
   <meta name="description" content="UniMate - Smart Student Manager">
 
-  <!-- Google Sign-In Client ID -->
+  <!-- Google Sign-In Client ID (Isay Firebase Console wali ID se match karlein) -->
   <meta name="google-signin-client_id" content="430571778122-f64duiofs14l6as6ge6jcuh4ofbbcmf7.apps.googleusercontent.com">
 
   <!-- iOS meta tags & icons -->
@@ -27,6 +27,13 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script>
+    // COOP Policy Fix: Is ke bagair login popup data wapis nahi bhejta
+    if (!window.opener) {
+      window.opener = self;
+    }
+  </script>
+  
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
